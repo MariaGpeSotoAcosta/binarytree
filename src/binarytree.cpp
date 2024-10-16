@@ -63,36 +63,7 @@ Node* BinaryTree::Remove(Node* node, int value) {
     return node;
 }
 
-Node* BinaryTree::FindMin(Node* node) {
-    while (node->Left != nullptr) {
-        node = node->Left;
-    }
-    return node;
-}
 
-void BinaryTree::InOrderTraversal(Node* node) {
-    if (node != nullptr) {
-        InOrderTraversal(node->Left);
-        cout << node->Data << " ";
-        InOrderTraversal(node->Right);
-    }
-}
-
-void BinaryTree::PreOrderTraversal(Node* node) {
-    if (node != nullptr) {
-        cout << node->Data << " ";
-        PreOrderTraversal(node->Left);
-        PreOrderTraversal(node->Right);
-    }
-}
-
-void BinaryTree::PostOrderTraversal(Node* node) {
-    if (node != nullptr) {
-        PostOrderTraversal(node->Left);
-        PostOrderTraversal(node->Right);
-        cout << node->Data << " ";
-    }
-}
 
 BinaryTree::~BinaryTree()
 {
